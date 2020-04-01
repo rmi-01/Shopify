@@ -1,0 +1,38 @@
+#navbar{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+}
+
+#nav1{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin: 5px;
+	display: flex;
+}
+
+#logo{
+	margin-left: 3%;
+}
+
+#nav1>p{
+	font-size: 19px;
+	margin: 0px 15px;
+	font-family: Consolas, monospace, arial;
+	text-shadow: 3px 1px #000000;
+}
+
+@media only screen and (max-width: 600px){
+	#nav1{
+		margin-top: 5px;
+	}
+	#nav1>p{
+	font-size: 15px;
+	margin: 0px 15px;
+	}
+
+}
