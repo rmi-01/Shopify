@@ -1,0 +1,22 @@
+#policy-main-div{
+	background-color: white;
+	width: 95%;
+	margin-left: 2.5%;
+	padding-left: 4.3%;
+	padding-top: 15px;
+	padding-right: 50px;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+.policy-font{
+	font-size: 13px;
+}
+.refund-table{
+	/*margin-left: 5%;*/
+}
+.hr-tags{
+
+	width: 80%;
+	margin-left: 10%;
+	border-color: black;
+}

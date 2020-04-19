@@ -1,0 +1,18 @@
+#list-icon{
+	margin-left: 30px;
+	padding: 10px;
+	border-radius: 10px;
+	color: #df678c;
+	background-color: #3d155f;
+	cursor: pointer;
+}
+
+#sidebar-close{
+	position: absolute;
+    transform:translate(-515px,0px);
+    transition: all 700ms linear;
+}
+#sidebar-open{
+    transform:translateX(0px);
+    transition: all 400ms linear; 
+}

@@ -1,0 +1,18 @@
+#CC-main-div{
+	width: 95%;
+	margin-left: 2.5%;
+	height: 60px;
+	padding-left: 2.5%;
+	border-bottom: 1px black solid;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 135px;
+}
+.padding-br-tags{
+	padding: 11px 27px 10px 27px;
+	border-radius: 10px 10px 0px 0px;
+}
+.border-color-tag{
+	color: #df678c;
+	background-color: #3d155f;
+}

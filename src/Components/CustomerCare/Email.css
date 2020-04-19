@@ -1,0 +1,46 @@
+#email-main-div{
+	background-color: white;
+	width: 95%;
+	margin-left: 2.5%;
+	padding-left: 4.3%;
+	padding-top: 15px;
+	padding-right: 50px;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+.email-head{
+	margin-left: 10%;
+	padding-left: 2.5%;
+}
+#email-div{
+	margin-left: 10%;
+	padding-left: 2.5%;
+	border-left: 1px black solid;
+	font-size: 13px;
+}
+.sub-span{
+	margin-right: 100px;
+}
+.des-span{
+	margin-right: 73px;
+}
+.sub-input{
+	border-radius: 30px;
+	border: 1px black solid;
+}
+.des-input{
+	height: 46vh;
+	border: 1px black solid;
+	resize: none;
+}
+.sub-input:focus,.des-input:focus{
+	background-color: black;
+	color: white;
+}
+.sub-button{
+	border: 1px solid #3d155f;
+	border-radius: 10px;
+	padding: 10px 25px 10px 25px;
+	background-color: #df678c;
+	color: #3d155f;
+}

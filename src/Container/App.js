@@ -3,45 +3,101 @@ import './App.css';
 import Navigation from '../Components/Navigation/Navigation';
 import SignUp from '../Components/SignUp/SignUp';
 import Login from '../Components/Login/Login';
+import CardList from '../Components/Card/CardList';
+import Slider from '../Components/Slider/slider';
+import MainPage from '../Components/MainPage/MainPage';
+import CustomerCare from '../Components/CustomerCare/CustomerCare';
+import Footer from '../Components/Footer/footer';
 
-const Nav_links = ['Sell', 'Buy', 'Login', 'Sign Up', 'Customer Care', 'Home'];
+const Nav_links = ['Home', 'Sell', 'Login', 'Sign Up', 'Customer Care'];
 
 class App extends React.Component{
 
 	constructor(){
 		super();
 		this.state = {
-			route: 'Home'
+			mainRoute: 'Home',
+			ccRoute: 'FAQ',
+			auRoute: null,
+			sideRoute: null
 		}
+		
 	}
 
-	onrouteChange = (route) => {
+
+	onmainRouteChange = (route) => {
+		this.setState({mainRoute: route,
+						sideRoute: null});
+	}
+
+	onccRouteChange = (route) => {
+		this.setState({ccRoute: route});
+	}
+
+	onauRouteChange = (route) => {
+		this.setState({auRoute: route})
+	}
+
+	onsideRouteChange = (route) => {
+		this.setState({sideRoute: route,
+						mainRoute: null})
 		console.log(route);
-		this.setState({route: route});
 	}
 
 	render(){
-		const {route} = this.state;
+		const {mainRoute, ccRoute, sideRoute} = this.state;
 		return (
+			
 		   	<div>
 		   	<Navigation Nav_links={Nav_links} 
-		   	onrouteChange={this.onrouteChange}
-		   	route={this.state.route}/>
-		   	{
-		   		route==='Sign Up'
-		   		?
-		   		<SignUp/>
-		   		:
-		   		route==='Login'
-		   		?
-		   		<Login/>
-		   		:
-		   		<h1>Hello</h1>
+		   			onmainRouteChange={this.onmainRouteChange}
+		   			mainRoute={mainRoute}
+		   			sideRoute={sideRoute}
+		   			onsideRouteChange={this.onsideRouteChange}/>
+		   		{
+		   			mainRoute==="Login" && sideRoute===null
+		   			?
+		   			<Login/>
+		   			:
+		   			mainRoute==="Sign Up" && sideRoute===null
+		   			?
+		   			<SignUp/>
+		   			:
+		   			mainRoute==="Home" && sideRoute===null
+		   			?
+		   			<div>
+		   				<div id="main-slider">
+		   					<Slider/>
+		   				</div>
+		   				<div id="cardList">
+		   					<CardList/>
+		   				</div>
 
-		   	}
+		   			</div>
+		   			:
+		   			mainRoute==="Customer Care" && sideRoute===null
+		   			?
+		   			<CustomerCare ccRoute={ccRoute}
+		   			onccRouteChange={this.onccRouteChange}/>
+		   			:
+		   			mainRoute==="Sell" && sideRoute===null
+		   			?
+		   			""
+		   			:
+		   			sideRoute!==null
+		   			?
+		   			<MainPage sideRoute={sideRoute}/>
+		   			:
+		   			""
+		   		}
+					
+		   	<Footer onmainRouteChange={this.onmainRouteChange}
+		   	onccRouteChange={this.onccRouteChange}
+		   	auRoute={this.state.auRoute}
+		   	onauRouteChange={this.onauRouteChange}/>
 
-
-		    </div>
+		   	</div>
+		   	
 		);
 	}
 }

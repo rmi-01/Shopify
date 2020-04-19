@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// import App from './Container/App';
 import App from './Container/App';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 ReactDOM.render(
   <React.StrictMode>

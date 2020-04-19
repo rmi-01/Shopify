@@ -3,48 +3,28 @@ import '../SignUp/SignUp.css';
 
 const Login = () => {
 	return(
-		<article className="br4 ba dark-gray 
-			b--black-10 center shadow-5">
-		<main className="pa4 black-90 mb3">
-			 <div className="measure">
-			    <fieldset id="sign_up"
-			    className="ba b--transparent ph0 mh0">
-			    <legend 
-			    className="f2 fw6 ph0 mh0 tc">Sign In</legend>
-			    <div className="mt3">
-			    <label className="db fw6 lh-copy f6" 
-			    htmlFor="contact-number">Contact Number</label>
-			    <input 
-			    className="pa2 input-reset ba bg-transparent 
-			   	hover-bg-black hover-white w-100" 
-			    type="text" name="contact-number"  
-			    id="contact-number"/>
-			    </div>
-			    <div className="mv3">
-			    <label className="db fw6 lh-copy f6" 
-			    htmlFor="password">Password</label>
-			    <input className="b pa2 input-reset ba 
-			    bg-transparent hover-bg-black 
-			    hover-white w-100" 
-			    type="password" 
-			    name="password"  
-			    id="password"/>
-			    </div>
-			    </fieldset>
-			    <div>
-			    <input className="b ph3 pv2 input-reset
-			    ba b--black bg-transparent grow 
-			    pointer f5 w-40" type="submit" 
-			    value="Sign in"/>
-			    </div>
-			    <div className="lh-copy mt3">
-			    <p className="f6 link 
-			    dim black db pointer w3">
-			    Sign Up</p>
-			    </div>
-		  		</div>
-			</main>
-		</article>
+		<div>
+			<div className="backPic"></div>
+			<div className="mainForm" style={{top: "175px"}}>
+				<h1 id="mainTitle" className="tc f2">Login</h1>
+
+				<label className="mt3 mb1 f5 b" htmlFor="contact-number">Contact Number</label>
+				<br/>
+				<input type="text" className="mt1 mb3 w-80 pa2 b--black inputTags" 
+				name="contact-number" placeholder="Enter contact number"/>
+				
+				<br/>
+
+				<label className="mt3 mb1 f5 b" htmlFor="password">Password</label>
+				<br/>
+				<input type="password" className="mt1 mb3 w-80 pa2 b--black inputTags" 
+				name="password" placeholder="Enter password"/>
+
+				<br/>
+				<input type="submit" className="mt3 mb1 w-30 pa2 b--black pointer br4 grow" value="Sign in"/>
+				<p id="lastLine" className="mt1 pointer w-40 underline-hover">Create an account</p>				
+			</div>
+		</div>
 		);
 }
 

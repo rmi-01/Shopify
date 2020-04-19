@@ -1,0 +1,26 @@
+#FAQ-main-div{
+	background-color: white;
+	width: 95%;
+	margin-left: 2.5%;
+	padding-left: 4.3%;
+	padding-top: 15px;
+	padding-right: 50px;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+.single-div-comp{
+	font-size: 13px;
+	padding: 10px;
+	padding-right: 19px;
+	padding-left: 19px;
+	border: 1px black solid;
+	border-radius: 10px;
+}
+.opening-class{
+	transform: translateY(0px);
+	transition: all 700ms;
+}
+.closing-class{
+	transition: all 700ms linear;
+	transform: translateY(0px);
+}

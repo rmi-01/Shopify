@@ -1,0 +1,21 @@
+#basicCard{
+	background-color: white;
+	margin: 15px;
+	padding: 0px;
+	width: 190px;
+	height: 300px;
+	padding: 10px;
+	font-size: 14px;
+}
+
+#basicCard:hover{
+	box-shadow: 5px 5px 3px #dee2e6;
+	transition: 0.5s all;
+	cursor: pointer;
+}
+#title,#price{
+	font-weight: bold;
+}
+#title,#des,#price,#image{
+	margin-bottom: 15px;
+}

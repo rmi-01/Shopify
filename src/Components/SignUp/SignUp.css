@@ -1,14 +1,32 @@
-article{ 
-	width : 38%;
- 	height: auto;
- 	margin : 30px;
- 	margin-top: 135px;
- 	/*background-image: linear-gradient(#F6F0EA, #F1DFD1);*/
+.backPic{
+	/*position: absolute;*/
+	z-index: -3;
+	background: url('Background.jpg') no-repeat center center fixed;
+	background-size: cover;
+	filter: blur(1px);
+	width: 98.75vw;
+	height: 100vh;
+}
+.mainForm{
+	position: absolute;
+	z-index: 1;
+	top: 155px;
+	background-color: white;
+	left: 30%;
+	width: 40%;
+	padding-top: 5px;
+	padding-bottom: 40px;
+	padding-left: 30px;
+	padding-right: 10px;
+	box-shadow: 1px 1px 10px black;
+	border-radius: 10px;
+}
+#lastLine{
+	font-size: 15px;
+}
 
- }
+.inputTags:focus{
+	color: white;
+	background-color: black;
 
-@media screen and (max-width: 800px){
-	article{
-		width : 60%;
-	}
 }
